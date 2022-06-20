@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Web | Portofolio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li> 
+                    <li><a href="anggota.html">Anggota</a></li> 
+                </ul>
+            </nav>
+        </div>
+        <main class="content">
+              <section class="hero">
+                  <img src="cat.jpg" alt="">
+              <div class="hero-content">
+                  <h1>HAITECH</h1><br></h2>Mahasiswa/i Universitas Muhammadiyah Yogyakarta</h2><br><br>  
+<p> Menikmati rasa pahit lebih baik, daripada menghayalkan rasa manis yang tak pernah terwujudkan - (ira) <br>
+    Kamu diciptakan untuk menjadi nyata, bukan untuk menjadi sempurna - (dita) <br>
+    Tutor cari duit gampang? - (hijjaj)
+</p>
+              </div>
+                </section>
+        </div>
+        <div class="footer">
+            <footer>
+                <center>
+                    <h1>Sekarang adalah Jam :</h1> 
+                    <h1 style="font-size: 25px; font-family:  sans-serif;" id="jam"></h1>
+                </center>
+            </footer>
+        </div>
+    </div>    
+</body>
+</html>
+<script type="text/javascript">
+    window.onload = function() { jam(); }
+   
+    function jam() {
+     var e = document.getElementById('jam'),
+     d = new Date(), h, m, s;
+     h = d.getHours();
+     m = set(d.getMinutes());
+     s = set(d.getSeconds());
+   
+     e.innerHTML = h +':'+ m +':'+ s;
+   
+     setTimeout('jam()', 1000);
+    }
+   
+    function set(e) {
+     e = e < 10 ? '0'+ e : e;
+     return e;
+    }
+   </script>
